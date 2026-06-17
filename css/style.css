@@ -1,0 +1,1447 @@
+/* ===================================
+   RESET
+=================================== */
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ===================================
+   HERO WRAPPER
+=================================== */
+
+.hero-wrapper {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* ===================================
+   BACKGROUND GLOW
+=================================== */
+
+.hero-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(49, 100, 255, 0.15),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 15%,
+      rgba(49, 100, 255, 0.12),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 50% 85%,
+      rgba(49, 100, 255, 0.08),
+      transparent 45%
+    );
+
+  animation: glowMove 14s ease-in-out infinite;
+}
+
+@keyframes glowMove {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-20px) translateY(-10px);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+/* ===================================
+   COIN CLUSTER
+=================================== */
+
+.coin-main {
+  width: 650px;
+  max-width: 100%;
+  object-fit: contain;
+
+  position: relative;
+  z-index: 10;
+
+  will-change: transform;
+
+  filter:
+    drop-shadow(0 20px 60px rgba(0, 0, 0, 0.35));
+}
+
+/* ===================================
+   FLOATING ANIMATION
+=================================== */
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* ===================================
+   NAVBAR
+=================================== */
+
+nav {
+  position: relative;
+  z-index: 50;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color .3s ease;
+}
+
+nav ul li a:hover {
+  color: #3164ff;
+}
+
+/* ===================================
+   BUTTON
+=================================== */
+
+.hero-btn {
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 35px rgba(49, 100, 255, .35);
+}
+
+/* ===================================
+   STATS CARD
+=================================== */
+
+.stats-card {
+  z-index: 20;
+  backdrop-filter: blur(10px);
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.25);
+}
+
+/* ===================================
+   SCROLL REVEAL SUPPORT
+=================================== */
+
+.reveal-section {
+  will-change: transform, opacity;
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width: 1024px) {
+
+  .coin-main {
+    width: 500px;
+  }
+
+  .stats-card {
+    width: 420px !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .coin-main {
+    width: 340px;
+  }
+
+  .stats-card {
+    position: relative !important;
+
+    width: 100% !important;
+
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+
+    transform: none !important;
+
+    margin-top: 30px;
+  }
+
+}
+/* ===================================
+   LOGO MARQUEE
+=================================== */
+
+.logo-strip {
+  position: relative;
+}
+
+.logo-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.logo-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  will-change: transform;
+}
+
+.logo-item {
+  height: 32px;
+  width: auto;
+  flex-shrink: 0;
+
+  opacity: 0.75;
+
+  transition: all 0.3s ease;
+}
+
+.logo-item:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.feature-card{
+  transition:all .4s ease;
+}
+
+.feature-card:hover{
+  transform:translateY(-8px);
+}
+
+.feature-card img{
+  transition:all .5s ease;
+}
+
+.feature-card:hover img{
+  transform:scale(1.03);
+}
+
+
+.crypto-tools {
+  position: relative;
+}
+
+.feature-card {
+  transition: all 0.45s cubic-bezier(.22,1,.36,1);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 0 30px rgba(49,100,255,.15),
+    0 30px 80px rgba(0,0,0,.35);
+}
+
+.tool-img {
+  animation: floatImage 8s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* =====================================
+HOW IT WORKS
+===================================== */
+
+.steps-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.step-tab {
+  height: 62px;
+  padding: 0 32px;
+  border-radius: 18px;
+  font-size: 17px;
+  color: #0d1737;
+  transition: .3s;
+}
+
+.step-tab.active {
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.steps-card {
+
+  width: 1180px;
+  max-width: 100%;
+
+  height: 780px;
+
+  background: #ECECF4;
+
+  position: relative;
+}
+
+.steps-content {
+  z-index: 20;
+}
+
+.signup-btn {
+  transition: .3s;
+}
+
+.signup-btn:hover {
+  transform: translateY(-3px);
+}
+
+.phones-image {
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -30px;
+
+  width: 930px;
+
+  transform: translateX(-50%);
+
+  z-index: 10;
+
+  pointer-events: none;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+  .steps-card{
+    height:620px;
+  }
+
+  .steps-content h3{
+    font-size:32px;
+  }
+
+  .steps-content p{
+    width:90%;
+    font-size:16px;
+  }
+
+  .phones-image{
+    width:650px;
+    bottom:-20px;
+  }
+
+  .step-tab{
+    padding:0 15px;
+    font-size:14px;
+  }
+}
+
+/* ==========================
+CRYPTO SECTION
+========================== */
+
+.crypto-card{
+  transition:.5s;
+}
+
+.crypto-card:hover{
+  transform:translateY(-6px);
+}
+
+.crypto-coins{
+  transition:transform .6s ease;
+}
+
+.crypto-card:hover .crypto-coins{
+  transform:scale(1.05);
+}
+
+.crypto-btn{
+  transition:.35s;
+}
+
+.crypto-btn:hover{
+  background:white;
+  color:#0D1737;
+}
+
+/* Mobile */
+
+@media(max-width:1024px){
+
+  .crypto-card{
+    height:340px;
+  }
+
+  .crypto-coins{
+    width:560px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .crypto-content h2{
+    font-size:42px;
+  }
+
+  .crypto-content p{
+    font-size:16px;
+  }
+
+  .crypto-card{
+    height:280px;
+  }
+
+  .crypto-coins{
+    width:480px;
+    left:-50px;
+  }
+
+}
+
+/* ==========================
+CTA SECTION
+========================== */
+
+.cta-btn{
+  transition:.35s;
+}
+
+.cta-btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 35px rgba(49,100,255,.35);
+}
+
+.cta-logo{
+  filter:
+  drop-shadow(0 0 30px rgba(49,100,255,.25));
+
+  animation:floatLogo 5s ease-in-out infinite;
+}
+
+@keyframes floatLogo{
+
+  0%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-12px);
+  }
+
+  100%{
+    transform:translateY(0);
+  }
+
+}
+
+/* Mobile */
+
+@media(max-width:1024px){
+
+  .cta-logo{
+    width:380px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .cta-logo{
+    width:260px;
+    margin-top:30px;
+  }
+
+}
+
+.testimonial-review,
+.testimonial-section a,
+.testimonial-section button {
+  transition: all .35s ease;
+}
+
+.testimonial-review:hover {
+  transform: translateY(-8px);
+}
+
+.testimonial-section a:hover {
+  transform: translateY(-3px);
+}
+
+.testimonial-section button:hover {
+  transform: scale(1.05);
+}
+
+/* ===================================
+   NEWS SECTION HOVER EFFECTS
+=================================== */
+
+.news-section button,
+.news-section a {
+  transition: all 0.35s ease;
+}
+
+.news-section button:hover,
+.news-section a:hover {
+  transform: translateY(-4px);
+}
+
+/* Main News Card */
+
+.news-card {
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.news-card:hover {
+  transform: translateY(-8px);
+}
+
+.news-card img {
+  transition: transform 0.8s ease;
+}
+
+.news-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Newsletter Card */
+
+.newsletter-card {
+  transition: all 0.4s ease;
+}
+
+.newsletter-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(49, 100, 255, 0.15);
+}
+
+/* Small News Items */
+
+.news-item {
+  transition: all 0.35s ease;
+}
+
+.news-item:hover {
+  transform: translateX(8px);
+}
+
+.footer-wrap{
+  position:relative;
+
+  max-width:1120px;
+  height:710px;
+
+  margin:auto;
+
+  background:#00124F;
+
+  border-radius:40px;
+
+  overflow:hidden;
+
+  padding:80px 75px 40px;
+}
+
+/* Glow */
+
+.footer-glow{
+  position:absolute;
+
+  left:50%;
+  bottom:-120px;
+
+  transform:translateX(-50%);
+
+  width:900px;
+  height:500px;
+
+  background:
+  radial-gradient(
+    circle,
+    rgba(49,100,255,.35),
+    transparent 70%
+  );
+
+  pointer-events:none;
+}
+
+/* Top */
+
+.footer-top{
+  display:flex;
+  justify-content:space-between;
+}
+
+.footer-left h2{
+  color:#fff;
+
+  font-size:56px;
+  line-height:1.05;
+  font-weight:700;
+}
+
+.footer-left p{
+  margin-top:18px;
+
+  color:#cfd6f2;
+
+  font-size:18px;
+  line-height:1.7;
+
+  max-width:380px;
+}
+
+.download-btn{
+  margin-top:24px;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  width:170px;
+  height:52px;
+
+  border-radius:999px;
+
+  background:#3164FF;
+  color:white;
+
+  font-size:18px;
+}
+
+/* Links */
+
+.footer-links{
+  display:flex;
+  gap:90px;
+
+  padding-top:10px;
+}
+
+.footer-links div{
+  display:flex;
+  flex-direction:column;
+  gap:28px;
+}
+
+.footer-links a{
+  color:white;
+  font-size:18px;
+  transition:.3s;
+}
+
+.footer-links a:hover{
+  color:#3164ff;
+}
+
+/* Newsletter */
+
+.newsletter-box{
+  margin-top:135px;
+
+  background:#ECECF4;
+
+  border-radius:24px;
+
+  height:126px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:0 40px;
+}
+
+.newsletter-box h3{
+  color:#0D1737;
+
+  font-size:22px;
+  font-weight:700;
+}
+
+.newsletter-box p{
+  color:#7E849E;
+
+  margin-top:6px;
+
+  font-size:17px;
+}
+
+.newsletter-form{
+  width:470px;
+  height:54px;
+
+  background:#DDE0EB;
+
+  border-radius:999px;
+
+  padding:6px;
+
+  display:flex;
+  align-items:center;
+}
+
+.newsletter-form input{
+  flex:1;
+
+  border:none;
+  outline:none;
+
+  background:none;
+
+  padding:0 20px;
+
+  font-size:16px;
+}
+
+.newsletter-form button{
+  width:130px;
+  height:42px;
+
+  border:none;
+
+  border-radius:999px;
+
+  background:#3164FF;
+  color:white;
+
+  cursor:pointer;
+}
+
+/* Bottom */
+
+.footer-bottom{
+  position:absolute;
+
+  left:75px;
+  right:75px;
+  bottom:35px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.footer-bottom img{
+  width:26px;
+}
+
+.footer-bottom p{
+  color:#d7def6;
+  font-size:15px;
+}
+
+/* ===================================
+   SITE-WIDE RESPONSIVE OVERRIDES
+   Desktop is intentionally untouched.
+=================================== */
+
+@media (max-width: 1023px) {
+
+  body {
+    min-width: 0;
+  }
+
+  img,
+  video,
+  canvas,
+  svg {
+    max-width: 100%;
+  }
+
+  nav {
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+  }
+
+  nav .hero-btn {
+    height: 46px !important;
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+    font-size: 15px !important;
+  }
+
+  section > div[class*="max-w-"] {
+    width: min(100% - 32px, 980px);
+  }
+
+  [class*="grid-cols-["],
+  .testimonial-section .grid,
+  .news-section .grid,
+  .crypto-tools .grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .hero-left {
+    align-items: flex-start;
+    padding-top: 48px;
+  }
+
+  .hero-left h1 {
+    font-size: clamp(42px, 8vw, 58px) !important;
+    letter-spacing: -1px !important;
+  }
+
+  .hero-left + div {
+    min-height: 420px;
+  }
+
+  .feature-card {
+    min-width: 0;
+  }
+
+  .crypto-tools > div {
+    padding: 44px 28px !important;
+    border-radius: 32px !important;
+  }
+
+  .crypto-tools h2,
+  .crypto-content h2,
+  .news-section h2,
+  .testimonial-section h2,
+  section h2 {
+    font-size: clamp(34px, 6vw, 44px) !important;
+    letter-spacing: -1px !important;
+    line-height: 1.08 !important;
+  }
+
+  .crypto-tools p,
+  .crypto-content p,
+  .news-section p,
+  .testimonial-section p {
+    font-size: 16px !important;
+  }
+
+  .crypto-tools .feature-card {
+    height: auto !important;
+    min-height: 300px;
+  }
+
+  .tool-payment img,
+  .tool-lock img,
+  .tool-data img,
+  .tool-engine img {
+    max-width: 80%;
+  }
+
+  .steps-tabs,
+  section div[class*="rounded-[24px]"][class*="p-[8px]"] {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .steps-tabs button,
+  section div[class*="rounded-[24px]"][class*="p-[8px]"] button {
+    white-space: nowrap;
+  }
+
+  div[class*="w-[970px]"] {
+    width: 100% !important;
+  }
+
+  .testimonial-section .flex[class*="justify-between"],
+  .news-section .flex[class*="justify-between"] {
+    flex-wrap: wrap;
+  }
+
+  .news-section .grid > div,
+  .testimonial-section .grid > div {
+    min-width: 0;
+  }
+
+  section div[class*="bg-[#00124D]"],
+  section div[class*="bg-[#00134F]"] {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+
+  section div[class*="bg-[#00124D]"] > .relative.z-10.flex,
+  section div[class*="bg-[#00134F]"] .grid {
+    flex-direction: column !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 36px !important;
+  }
+
+  section div[class*="bg-[#00124D]"] div[class*="flex gap-20"] {
+    gap: 48px !important;
+  }
+
+  section div[class*="bg-[#00124D]"] div[class*="bg-[#F2F3F8]"] {
+    align-items: stretch !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    margin-top: 64px !important;
+  }
+
+  section div[class*="bg-[#00124D]"] div[class*="w-[430px]"] {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 767px) {
+
+  section {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+
+  section[class*="mt-[-"] {
+    margin-top: 0 !important;
+  }
+
+  section > div[class*="max-w-"] {
+    width: min(100% - 24px, 420px);
+  }
+
+  nav {
+    padding: 18px 18px 0 !important;
+  }
+
+  nav img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  nav .hero-btn {
+    height: 42px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    font-size: 14px !important;
+  }
+
+  body > section:first-of-type {
+    padding-top: 20px !important;
+    padding-bottom: 28px !important;
+    margin-top: 0 !important;
+  }
+
+  body > section:first-of-type > div {
+    height: auto !important;
+    min-height: 92px;
+    border-radius: 26px !important;
+  }
+
+  .hero-left {
+    padding-top: 36px;
+  }
+
+  .hero-left h1 {
+    font-size: 42px !important;
+    line-height: 1.02 !important;
+  }
+
+  .hero-left p {
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+  }
+
+  .hero-left .mt-24 {
+    margin-top: 36px !important;
+  }
+
+  .hero-left + div {
+    min-height: 320px;
+  }
+
+  .coin-main {
+    width: min(330px, 92vw);
+  }
+
+  .stats-card {
+    height: auto !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    padding: 20px !important;
+    border-radius: 20px !important;
+  }
+
+  .stats-card h3 {
+    font-size: 26px !important;
+  }
+
+  .feature-card.grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .feature-card,
+  .feature-card > div,
+  .feature-card img {
+    border-radius: 22px !important;
+  }
+
+  .feature-card > div {
+    padding: 28px !important;
+  }
+
+  .crypto-tools {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .crypto-tools > div {
+    padding: 34px 18px !important;
+    border-radius: 28px !important;
+  }
+
+  .crypto-tools .feature-card {
+    min-height: 260px;
+    padding: 28px !important;
+  }
+
+  .crypto-tools .grid {
+    gap: 16px !important;
+  }
+
+  .tool-payment img,
+  .tool-lock img,
+  .tool-data img,
+  .tool-engine img {
+    width: 75% !important;
+    max-width: 320px;
+  }
+
+  .crypto-tools .flex.justify-center {
+    flex-direction: column;
+    gap: 12px !important;
+  }
+
+  .crypto-tools .flex.justify-center a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  div[class*="w-[970px]"] {
+    height: 470px !important;
+  }
+
+  div[class*="w-[970px]"] p {
+    width: min(100%, 300px) !important;
+  }
+
+  div[class*="w-[970px]"] img {
+    width: 620px !important;
+    max-width: none;
+  }
+
+  .crypto-card {
+    height: 260px !important;
+  }
+
+  .crypto-coins {
+    left: 0 !important;
+    width: 100% !important;
+  }
+
+  .cta-logo {
+    width: 220px !important;
+  }
+
+  section div[class*="h-[440px]"] {
+    height: auto !important;
+    min-height: 520px;
+  }
+
+  section div[class*="h-[440px]"] > .relative.z-20 {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    gap: 24px !important;
+    padding: 44px 26px !important;
+  }
+
+  .testimonial-section .grid {
+    gap: 18px !important;
+  }
+
+  .testimonial-section .h-\[430px\],
+  .testimonial-review {
+    height: auto !important;
+  }
+
+  .testimonial-section .flex.items-start,
+  .testimonial-review .flex.items-center.justify-between {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+  }
+
+  .testimonial-review {
+    gap: 28px;
+    padding: 26px !important;
+  }
+
+  .news-section .flex.justify-between,
+  .news-section .flex.items-start {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+  }
+
+  .news-section a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .news-section input,
+  section input {
+    min-width: 0;
+  }
+
+  .news-section div[class*="h-[425px]"],
+  .news-section div[class*="h-[360px]"],
+  article div[class*="h-[220px]"] {
+    height: 220px !important;
+  }
+
+  .news-section div[class*="rounded-full"][class*="p-1.5"],
+  .news-section div[class*="rounded-full"][class*="p-[5px]"],
+  section div[class*="w-[430px]"] {
+    height: auto !important;
+    align-items: stretch !important;
+    border-radius: 18px !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  .news-section div[class*="rounded-full"][class*="p-1.5"] button,
+  .news-section div[class*="rounded-full"][class*="p-[5px]"] button,
+  section div[class*="w-[430px]"] button {
+    width: 100% !important;
+    height: 44px !important;
+    margin-left: 0 !important;
+  }
+
+  .news-section div[class*="rounded-full"][class*="p-1.5"] input,
+  .news-section div[class*="rounded-full"][class*="p-[5px]"] input,
+  section div[class*="w-[430px]"] input {
+    width: 100%;
+    min-height: 44px;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .mt-\[16px\].grid,
+  .mt-16.grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .scale-\[1\.03\] {
+    transform: none !important;
+  }
+
+  .faq-btn {
+    gap: 16px;
+    padding: 22px !important;
+  }
+
+  .faq-btn span:first-child {
+    font-size: 16px !important;
+  }
+
+  section div[class*="bg-[#00134F]"] {
+    height: auto !important;
+    padding: 28px 18px !important;
+    border-radius: 28px !important;
+  }
+
+  section div[class*="bg-[#00134F]"] .grid,
+  section div[class*="grid-cols-2"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  section div[class*="bg-[#00134F]"] .mt-\[-30px\] {
+    margin-top: 0 !important;
+  }
+
+  section div[class*="bg-[#00134F]"] h4 {
+    font-size: 16px !important;
+    overflow-wrap: anywhere;
+  }
+
+  section div[class*="bg-[#00134F]"] .flex.items-center.gap-4 {
+    align-items: flex-start !important;
+  }
+
+  section div[class*="bg-[#00134F]"] form > .grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  section div[class*="bg-[#00124D]"] {
+    padding: 36px 20px 28px !important;
+    border-radius: 28px !important;
+  }
+
+  section div[class*="bg-[#00124D]"] h2 {
+    font-size: 34px !important;
+  }
+
+  section div[class*="bg-[#00124D]"] div[class*="flex gap-20"] {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px !important;
+  }
+
+  section div[class*="bg-[#00124D]"] div[class*="bg-[#F2F3F8]"] {
+    padding: 24px 18px !important;
+  }
+
+  section div[class*="bg-[#00124D]"] > .relative.z-10.mt-12 {
+    align-items: center !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    text-align: center;
+  }
+
+  section div[class*="h-[500px]"] {
+    height: auto !important;
+    padding: 36px 20px !important;
+  }
+
+  section div[class*="grid-cols-3"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  section .bg-\[\#ECECF4\] {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 390px) {
+
+  section > div[class*="max-w-"] {
+    width: min(100% - 20px, 375px);
+  }
+
+  nav .hero-btn {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  .hero-left h1,
+  section h2,
+  .crypto-tools h2,
+  .crypto-content h2,
+  .news-section h2,
+  .testimonial-section h2 {
+    font-size: 34px !important;
+    letter-spacing: 0 !important;
+  }
+
+  .hero-left p,
+  section p {
+    font-size: 15px !important;
+  }
+
+  .feature-card > div,
+  .crypto-tools .feature-card,
+  .testimonial-review,
+  section div[class*="bg-[#02124A]"] {
+    padding: 22px !important;
+  }
+
+  .logo-track {
+    gap: 32px !important;
+  }
+
+  .logo-item {
+    height: 26px;
+  }
+
+  div[class*="w-[970px]"] img {
+    width: 560px !important;
+  }
+}
+.coin-img {
+  animation: floatCoin 5s ease-in-out infinite;
+  transition: transform 0.5s ease;
+}
+
+.coin-img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes floatCoin {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.crypto-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.crypto-card{
+  background:#ECECF4;
+  border-radius:32px;
+  padding:36px;
+  min-height:270px;
+
+  transition:all .4s ease;
+}
+
+.crypto-card:hover{
+  transform:translateY(-10px);
+}
+
+.crypto-header{
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+}
+
+.crypto-header img{
+  width:42px;
+  height:42px;
+  object-fit:contain;
+}
+
+.crypto-header h3{
+  font-size:20px;
+  font-weight:700;
+  color:#0D1737;
+}
+
+.crypto-header span{
+  background:#DCE4FF;
+  color:#3164FF;
+  font-size:14px;
+  padding:4px 8px;
+  border-radius:8px;
+}
+
+.crypto-header p{
+  color:#69708E;
+  font-size:16px;
+}
+
+.crypto-desc{
+  margin-top:28px;
+  color:#69708E;
+  font-size:17px;
+  line-height:1.7;
+}
+
+.crypto-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:36px;
+
+  font-size:18px;
+  font-weight:500;
+  color:#0D1737;
+}
+
+.crypto-link span{
+  transition:.3s;
+}
+
+.crypto-card:hover .crypto-link span{
+  transform:translateX(5px);
+}
+
+@media(max-width:1024px){
+
+  .crypto-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+@media(max-width:768px){
+
+  .crypto-grid{
+    grid-template-columns:1fr;
+  }
+
+  .crypto-card{
+    padding:28px;
+    border-radius:26px;
+    min-height:auto;
+  }
+
+  .crypto-header h3{
+    font-size:18px;
+  }
+
+  .crypto-desc{
+    font-size:16px;
+  }
+
+}

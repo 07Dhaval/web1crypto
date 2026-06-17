@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/image/logo.png"
+      type="image/x-icon"
+    />
+    <title>Crypto</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body class="bg-black overflow-x-hidden font-[Inter]">
+    <!-- HERO -->
+
+    <section class="px-4 pt-20 pb-20 mt-[-80px]">
+      <div
+        class="relative mx-auto max-w-[1180px] h-[110px] overflow-hidden rounded-[40px]"
+      >
+        <!-- Background -->
+        <img
+          src="./assets/image/hb.png"
+          alt=""
+          class="absolute inset-0 w-full h-full object-cover"
+        />
+
+        <!-- Overlay -->
+        <div
+          class="absolute inset-0 bg-black from-[#black]/30 via-transparent to-transparent"
+        ></div>
+
+        <!-- Navbar -->
+        <nav
+          class="relative z-50 flex items-center justify-between px-[60px] pt-[30px]"
+        >
+          <img src="./assets/image/logo.png" alt="" class="w-[28px] h-[28px]" />
+
+          <ul
+            class="hidden lg:flex items-center gap-10 text-white text-[15px] font-medium"
+          >
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <a
+            href="#"
+            class="hero-btn h-[52px] px-8 rounded-full bg-[#3164FF] flex items-center justify-center text-white text-[16px] font-medium transition hover:scale-105"
+          >
+            Get started
+          </a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="mt-[-180px] bg-black py-[120px]">
+      <div class="max-w-[980px] mx-auto px-4">
+        <!-- Heading -->
+
+        <div class="text-center">
+          <h2 class="text-white text-[44px] font-semibold leading-none">
+            Pricing plans for you
+          </h2>
+
+          <p
+            class="mt-5 max-w-[620px] mx-auto text-[#A9AFC5] text-[16px] leading-[1.2]"
+          >
+            We offer a range of straightforward pricing plans to suit your
+            crypto trading needs, from beginner to expert investors.
+          </p>
+        </div>
+
+        <!-- Pricing Cards -->
+
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-5 items-center">
+          <!-- Basic -->
+
+          <div class="mt-[25px] bg-[#ECECF4] rounded-[32px] p-4">
+            <div class="bg-[#E5E8F1] rounded-[26px] p-8">
+              <h3 class="mt-[-20px] text-[#0D1737] text-[20px] font-semibold">
+                Basic plan
+              </h3>
+
+              <p class="mt-2 text-[#737A92] text-[16px] leading-[1.2]">
+                Great for beginners, this plan offers all essential trading
+                tools.
+              </p>
+
+              <div class="mt-4 flex items-end">
+                <span
+                  class="text-[#0D1737] text-[44px] font-semibold leading-none"
+                >
+                  $19.99
+                </span>
+
+                <span class="mb-2 ml-2 text-[#737A92]"> /month </span>
+              </div>
+
+              <button
+                class="mt-8 w-full h-[44px] rounded-full border border-[#B8BED0] text-[#0D1737] font-medium"
+              >
+                Get started
+              </button>
+            </div>
+
+            <div class="mt-[-60px] p-10">
+              <h4 class="text-[#0D1737] text-[18px] font-semibold">
+                What's included?
+              </h4>
+
+              <div class="mb-[-50px] space-y-0">
+                <div
+                  class="flex items-center gap-3 py-4 border-b border-[#D9DDE8]"
+                >
+                  <span>✔</span>
+                  <span class="text-[#737A92] text-[16px]">
+                    Trading up to $100k per month
+                  </span>
+                </div>
+
+                <div
+                  class="flex items-center gap-3 py-4 border-b border-[#D9DDE8]"
+                >
+                  <span>✔</span>
+                  <span class="text-[#737A92] text-[16px]">
+                    Send & receive over 85 tokens
+                  </span>
+                </div>
+
+                <div
+                  class="flex items-center gap-3 py-4 border-b border-[#D9DDE8]"
+                >
+                  <span>✔</span>
+                  <span class="text-[#737A92] text-[16px]">
+                    Real time crypto trading
+                  </span>
+                </div>
+
+                <div class="flex items-center gap-3 py-4">
+                  <span>✔</span>
+                  <span class="text-[#737A92] text-[16px]">
+                    iOS & Android App
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRO CARD -->
+
+          <div
+            class="mt-[-30px] bg-[#ECECF4] rounded-[32px] p-4 scale-[1.03] shadow-[0_0_40px_rgba(255,255,255,0.08)]"
+          >
+            <div class="bg-[#E5E8F1] rounded-[26px] p-8">
+              <h3 class="mt-[-20px] text-[#0D1737] text-[20px] font-semibold">
+                Pro plan
+              </h3>
+
+              <p class="mt-2 text-[#737A92] text-[16px] leading-[1.2]">
+                Built for active traders, this plan offers advanced features and
+                increased volume limits.
+              </p>
+
+              <div class="mt-4 flex items-end">
+                <span
+                  class="text-[#0D1737] text-[44px] font-semibold leading-none"
+                >
+                  $29.99
+                </span>
+
+                <span class="mb-2 ml-2 text-[#737A92]"> /month </span>
+              </div>
+
+              <button
+                class="mt-6 w-full h-[44px] rounded-full bg-[#3164FF] text-white font-medium"
+              >
+                Get started
+              </button>
+            </div>
+
+            <div class="mt-[-30px] p-8">
+              <h4 class="text-[#0D1737] text-[18px] font-semibold">
+                What's included?
+              </h4>
+
+              <div class="mb-[-50px] space-y-0">
+                <div
+                  class="flex items-center gap-3 py-4 border-b border-[#D9DDE8]"
+                >
+                  <span class="text-[#3164FF]">✔</span>
+                  <span class="text-[#737A92] text-[16px]">
+                    Everything included in Basic
+                  </span>
+                </div>
+
+                <div
+                  class="flex items-center gap-3 py-4 border-b border-[#D9DDE8]"
+                >
+                  <span class="text-[#3164FF]">✔</span>
+                  <span class="text-[#737A92] text-[16px]">
+                    Trading up to $1MM per month
+                  </span>
+                </div>
+
+                <div
+                  class="flex items-center gap-3 py-4 border-b border-[#D9DDE8]"
+                >
+                  <span class="text-[#3164FF]">✔</span>
+                  <span class="text-[#737A92] text-[16px]">
+                    Windows & macOS app
+                  </span>
+                </div>
+
+                <div class="flex items-center gap-3 py-4">
+                  <span class="text-[#3164FF]">✔</span>
+                  <span class="text-[#737A92] text-[16px]">
+                    Premium support
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Expert -->
+
+          <div class="mt-[20px] bg-[#ECECF4] rounded-[32px] p-4">
+            <div class="bg-[#E5E8F1] rounded-[26px] p-8">
+              <h3 class="mt-[-20px] text-[#0D1737] text-[20px] font-semibold">
+                Expert plan
+              </h3>
+
+              <p class="mt-2 text-[#737A92] text-[16px] leading-[1.2]">
+                For expert investors needing support and top trading limits.
+              </p>
+
+              <div class="mt-4 flex items-end">
+                <span
+                  class="text-[#0D1737] text-[44px] font-semibold leading-none"
+                >
+                  $39.99
+                </span>
+
+                <span class="mb-2 ml-2 text-[#737A92]"> /month </span>
+              </div>
+
+              <button
+                class="mt-8 w-full h-[44px] rounded-full border border-[#B8BED0] text-[#0D1737] font-medium"
+              >
+                Get started
+              </button>
+            </div>
+
+            <div class="mt-[-30px] p-8">
+              <h4 class="text-[#0D1737] text-[18px] font-semibold">
+                What's included?
+              </h4>
+
+              <div class="mb-[-50px] space-y-0">
+                <div
+                  class="flex items-center gap-3 py-4 border-b border-[#D9DDE8]"
+                >
+                  <span>✔</span>
+                  <span class="text-[#737A92] text-[16px]">
+                    Everything included in Pro
+                  </span>
+                </div>
+
+                <div
+                  class="flex items-center gap-3 py-4 border-b border-[#D9DDE8]"
+                >
+                  <span>✔</span>
+                  <span class="text-[#737A92] text-[16px]">
+                    Trading up to $10MM per month
+                  </span>
+                </div>
+
+                <div
+                  class="flex items-center gap-3 py-4 border-b border-[#D9DDE8]"
+                >
+                  <span>✔</span>
+                  <span class="text-[#737A92] text-[16px]">
+                    Windows & macOS app
+                  </span>
+                </div>
+
+                <div class="flex items-center gap-3 py-4">
+                  <span>✔</span>
+                  <span class="text-[#737A92] text-[16px]">
+                    Dedicated support
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-[-100px] py-14 overflow-hidden">
+      <p class="text-center text-[#8c8fa7] text-sm mb-10">Used and loved by</p>
+
+      <div class="logo-slider">
+        <div class="logo-track flex items-center gap-16">
+          <!-- First Set -->
+          <img src="./assets/image/s1.png" class="logo-item" alt="" />
+          <img src="./assets/image/s2.png" class="logo-item" alt="" />
+          <img src="./assets/image/s3.png" class="logo-item" alt="" />
+          <img src="./assets/image/s4.png" class="logo-item" alt="" />
+          <img src="./assets/image/s5.png" class="logo-item" alt="" />
+          <img src="./assets/image/s6.png" class="logo-item" alt="" />
+
+          <!-- Duplicate Set -->
+          <img src="./assets/image/s1.png" class="logo-item" alt="" />
+          <img src="./assets/image/s2.png" class="logo-item" alt="" />
+          <img src="./assets/image/s3.png" class="logo-item" alt="" />
+          <img src="./assets/image/s4.png" class="logo-item" alt="" />
+          <img src="./assets/image/s5.png" class="logo-item" alt="" />
+          <img src="./assets/image/s6.png" class="logo-item" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-[-30px] bg-black py-[140px]">
+      <div class="max-w-[820px] mx-auto px-5">
+        <!-- Heading -->
+
+        <div class="text-center">
+          <h2 class="text-white text-[44px] font-semibold leading-none">
+            Have more questions?
+          </h2>
+
+          <p
+            class="mt-5 max-w-[720px] mx-auto text-[#AAB0C5] text-[18px] leading-[1.2]"
+          >
+            Get answers to frequent questions about our platform, security
+            measures, and features. Our support team is here to help if needed.
+          </p>
+        </div>
+
+        <!-- FAQ -->
+
+        <div class="mt-14 space-y-4">
+          <!-- Item 1 -->
+
+          <div class="faq-item overflow-hidden rounded-[20px] bg-[#ECECF4]">
+            <button
+              class="faq-btn w-full flex items-center justify-between px-8 py-7 text-left"
+            >
+              <span class="text-[#0D1737] text-[18px] font-semibold">
+                How do I start trading cryptocurrencies on your app?
+              </span>
+
+              <span class="faq-icon text-[32px] leading-none">+</span>
+            </button>
+
+            <div class="faq-content hidden">
+              <div class="px-8 pb-7 text-[#5E667F] text-[16px] leading-[1.2]">
+                Simply create an account, complete identity verification,
+                deposit funds, and choose from supported cryptocurrencies. Our
+                beginner-friendly dashboard guides you through every step.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+
+          <div class="faq-item overflow-hidden rounded-[20px] bg-[#ECECF4]">
+            <button
+              class="faq-btn w-full flex items-center justify-between px-8 py-7 text-left"
+            >
+              <span class="text-[#0D1737] text-[18px] font-semibold">
+                Can I withdraw my cryptocurrency to a personal wallet?
+              </span>
+
+              <span class="faq-icon text-[32px] leading-none">+</span>
+            </button>
+
+            <div class="faq-content hidden">
+              <div class="px-8 pb-7 text-[#5E667F] text-[16px] leading-[1.2]">
+                Yes. You can transfer supported cryptocurrencies to your
+                personal wallet anytime by entering the wallet address and
+                confirming the withdrawal request.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+
+          <div class="faq-item overflow-hidden rounded-[20px] bg-[#ECECF4]">
+            <button
+              class="faq-btn w-full flex items-center justify-between px-8 py-7 text-left"
+            >
+              <span class="text-[#0D1737] text-[18px] font-semibold">
+                How can I recover my account if I forget my password?
+              </span>
+
+              <span class="faq-icon text-[32px] leading-none">+</span>
+            </button>
+
+            <div class="faq-content hidden">
+              <div class="px-8 pb-7 text-[#5E667F] text-[16px] leading-[1.2]">
+                Click "Forgot Password" on the login screen and follow the
+                instructions sent to your registered email address to securely
+                reset your password.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+
+          <div class="faq-item overflow-hidden rounded-[20px] bg-[#ECECF4]">
+            <button
+              class="faq-btn w-full flex items-center justify-between px-8 py-7 text-left"
+            >
+              <span class="text-[#0D1737] text-[18px] font-semibold">
+                How does the app protect my investments?
+              </span>
+
+              <span class="faq-icon text-[32px] leading-none">+</span>
+            </button>
+
+            <div class="faq-content hidden">
+              <div class="px-8 pb-7 text-[#5E667F] text-[16px] leading-[1.2]">
+                We use multi-factor authentication, cold storage solutions,
+                encryption, and continuous monitoring to help protect your
+                digital assets and account information.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+
+          <div class="faq-item overflow-hidden rounded-[20px] bg-[#ECECF4]">
+            <button
+              class="faq-btn w-full flex items-center justify-between px-8 py-7 text-left"
+            >
+              <span class="text-[#0D1737] text-[18px] font-semibold">
+                Is user data encrypted both in transit and at rest?
+              </span>
+
+              <span class="faq-icon text-[32px] leading-none">+</span>
+            </button>
+
+            <div class="faq-content hidden">
+              <div class="px-8 pb-7 text-[#5E667F] text-[16px] leading-[1.2]">
+                Absolutely. All sensitive user information is encrypted using
+                industry-standard protocols while being transmitted and stored
+                on secure servers.
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+
+          <div class="faq-item overflow-hidden rounded-[20px] bg-[#ECECF4]">
+            <button
+              class="faq-btn w-full flex items-center justify-between px-8 py-7 text-left"
+            >
+              <span class="text-[#0D1737] text-[18px] font-semibold">
+                What cryptocurrencies can I buy with this app?
+              </span>
+
+              <span class="faq-icon text-[32px] leading-none">+</span>
+            </button>
+
+            <div class="faq-content hidden">
+              <div class="px-8 pb-7 text-[#5E667F] text-[16px] leading-[1.2]">
+                We support a wide range of popular cryptocurrencies including
+                Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), Ripple (XRP),
+                Solana (SOL), and many more.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-[-70px] bg-black py-[80px]">
+      <div
+        class="relative mx-auto w-full max-w-[1060px] rounded-[42px] bg-[#00124D] overflow-hidden px-[80px] pt-[90px] pb-[40px]"
+      >
+        <!-- Background Glow -->
+
+        <div
+          class="absolute left-1/2 bottom-[-280px] -translate-x-1/2 w-[900px] h-[500px] rounded-full bg-[#245BFF] opacity-30 blur-[140px]"
+        ></div>
+
+        <!-- TOP -->
+
+        <div class="relative z-10 flex justify-between">
+          <!-- Left -->
+
+          <div class="max-w-[360px]">
+            <h2
+              class="text-white text-[44px] font-semibold leading-[1.2] tracking-[-2px]"
+            >
+              Start investing
+              <br />
+              in crypto today
+            </h2>
+
+            <p class="mt-6 text-[#D7DDF3] text-[16px] leading-[1.7]">
+              Download our app and join thousands shaping their financial future
+              through cryptocurrency.
+            </p>
+
+            <a
+              href="#"
+              class="mt-8 inline-flex items-center justify-center h-[56px] px-8 rounded-full bg-[#3164FF] text-white text-[17px] font-medium"
+            >
+              Download app
+            </a>
+          </div>
+
+          <!-- Links -->
+
+          <div class="flex gap-20">
+            <div class="flex flex-col gap-4">
+              <a href="#" class="text-white text-[18px]">Cryptos</a>
+              <a href="#" class="text-white text-[18px]">Crypto single</a>
+              <a href="#" class="text-white text-[18px]">Blog post</a>
+              <a href="#" class="text-white text-[18px]">Careers</a>
+            </div>
+
+            <div class="flex flex-col gap-4">
+              <a href="#" class="text-white text-[18px]">Career single</a>
+              <a href="#" class="text-white text-[18px]">Pricing</a>
+              <a href="#" class="text-white text-[18px]">Contact V1</a>
+              <a href="#" class="text-white text-[18px]">Contact V2</a>
+              <a href="#" class="text-white text-[18px]">Contact V3</a>
+              <a href="#" class="text-white text-[18px]">Coming soon</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+
+        <div
+          class="relative z-10 mt-[140px] bg-[#F2F3F8] rounded-[28px] px-[42px] py-[28px] flex items-center justify-between"
+        >
+          <div>
+            <h3 class="text-[#0D1737] text-[24px] font-semibold">
+              Stay tuned for more updates
+            </h3>
+
+            <p class="mt-1 text-[#7D839B] text-[17px]">
+              Receive the latest news and updates from us.
+            </p>
+          </div>
+
+          <div
+            class="w-[430px] h-[54px] bg-[#E3E5F0] rounded-full flex items-center p-[6px]"
+          >
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="flex-1 bg-transparent px-6 text-[#0D1737] outline-none text-[16px]"
+            />
+
+            <button
+              class="h-full px-10 rounded-full bg-[#3164FF] text-white text-[16px] font-medium"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+
+        <!-- Bottom -->
+
+        <div class="relative z-10 mt-12 flex items-center">
+          <img src="./assets/image/logo.png" alt="" class="w-8" />
+
+          <p class="flex-1 text-center text-[#E1E7FF] text-[15px]">
+            Copyright © 2025 Defichain | Refund policy | Designed by BRIX
+            Templates - Powered by Framer
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <script src="./js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+
+<script>
+gsap.to(".logo-track", {
+  xPercent: -50,
+  ease: "none",
+  duration: 20,
+  repeat: -1
+});
+</script>
+    <script>
+      const faqBtns = document.querySelectorAll(".faq-btn");
+
+      faqBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const item = btn.parentElement;
+          const content = item.querySelector(".faq-content");
+          const icon = item.querySelector(".faq-icon");
+
+          document.querySelectorAll(".faq-content").forEach((el) => {
+            if (el !== content) {
+              el.classList.add("hidden");
+            }
+          });
+
+          document.querySelectorAll(".faq-icon").forEach((el) => {
+            if (el !== icon) {
+              el.textContent = "+";
+            }
+          });
+
+          content.classList.toggle("hidden");
+          icon.textContent = content.classList.contains("hidden") ? "+" : "−";
+        });
+      });
+    </script>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.from(".faq-item", {
+        y: 60,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.12,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".faq-item",
+          start: "top 85%",
+        },
+      });
+    </script>
+    <script>
+      gsap.from(".pricing-card", {
+        y: 80,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.15,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".pricing-card",
+          start: "top 85%",
+        },
+      });
+    </script>
+    <script>
+      gsap.from(".group", {
+        y: 80,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.12,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".group",
+          start: "top 85%",
+        },
+      });
+    </script>
+    <script>
+      gsap.from(".category-card", {
+        y: 80,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.15,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".category-card",
+          start: "top 85%",
+        },
+      });
+    </script>
+  </body>
+</html>
