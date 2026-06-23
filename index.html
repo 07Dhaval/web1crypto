@@ -20,23 +20,24 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
-  <body class="bg-black overflow-x-hidden font-[Inter]">
+  <body class="site-wave-page home-page bg-black overflow-x-hidden font-[Inter]">
+    <canvas id="particle-wave-bg" aria-hidden="true"></canvas>
     <!-- HERO -->
 
-    <section class="px-4 pt-20 pb-20">
+    <section class="home-hero px-4 pt-20 pb-20">
       <div
-        class="relative mx-auto max-w-[1180px] h-[740px] overflow-hidden rounded-[40px]"
+        class="home-hero-card relative mx-auto max-w-[1180px] h-[740px] overflow-hidden rounded-[40px]"
       >
         <!-- Background -->
         <img
           src="./assets/image/hb.png"
           alt=""
-          class="absolute inset-0 w-full h-full object-cover"
+          class="hero-background absolute inset-0 w-full h-full object-cover"
         />
 
         <!-- Overlay -->
         <div
-          class="absolute inset-0 bg-gradient-to-r from-[#071744]/30 via-transparent to-transparent"
+          class="hero-overlay absolute inset-0 bg-gradient-to-r from-[#071744]/30 via-transparent to-transparent"
         ></div>
 
         <!-- Navbar -->
@@ -1131,6 +1132,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
+    <script src="./js/nav.js"></script>
+    <script src="./js/wave-bg.js"></script>
     <script src="./js/app.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
 

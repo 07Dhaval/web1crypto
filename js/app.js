@@ -3,42 +3,6 @@ gsap.registerPlugin(ScrollTrigger);
 window.addEventListener("load", () => {
 
   /* ===================================
-     HERO TIMELINE
-  =================================== */
-
-  const tl = gsap.timeline();
-
-  tl.from("nav", {
-    y: -50,
-    opacity: 0,
-    duration: 0.8,
-    ease: "power3.out"
-  })
-
-  .from(".hero-left", {
-    y: 20,
-    opacity: 0,
-    duration: 0.8,
-    ease: "power3.out"
-  }, "-=0.3")
-
-  .from(".coin-main", {
-    scale: 0.92,
-    opacity: 0,
-    duration: 1.2,
-    ease: "power2.out"
-  }, "-=0.4")
-
-  .from(".stats-card", {
-    y: 20,
-    opacity: 0,
-    duration: 0.8,
-    ease: "power3.out"
-  }, "-=0.8");
-
-
-
-  /* ===================================
      MOUSE PARALLAX
   =================================== */
 

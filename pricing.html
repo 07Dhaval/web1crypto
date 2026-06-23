@@ -20,7 +20,8 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
-  <body class="bg-black overflow-x-hidden font-[Inter]">
+  <body class="site-wave-page bg-black overflow-x-hidden font-[Inter]">
+    <canvas id="particle-wave-bg" aria-hidden="true"></canvas>
     <!-- HERO -->
 
     <section class="px-4 pt-20 pb-20 mt-[-80px]">
@@ -65,7 +66,7 @@
       </div>
     </section>
 
-    <section class="mt-[-180px] bg-black py-[120px]">
+    <section class="mt-[-100px] bg-black py-[120px]">
       <div class="max-w-[980px] mx-auto px-4">
         <!-- Heading -->
 
@@ -685,5 +686,7 @@ gsap.to(".logo-track", {
         },
       });
     </script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/wave-bg.js"></script>
   </body>
 </html>
